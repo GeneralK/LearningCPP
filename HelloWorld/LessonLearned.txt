@@ -1,0 +1,7 @@
+6.12.26
+I learned how to use .git in the most brutal fucking way.
+I had a local project that's not part of a local repository.
+I created a remote repository on github, thinking I can just deposit my project into it. (I was half right)
+Well, when I created a repository, in VS Community, and linked to the remote repository- I suddenly now have 2 branches
+1 main - from github, and 1 master - from Vs community
+Took me 2 hours to figure out how to reverse commits, cause I was blindly commiting, not knowing what I was doing.
