@@ -23,6 +23,5 @@
     <Text Include="Wordle.txt">
       <Filter>Source Files</Filter>
     </Text>
-    <Text Include="LessonLearned.txt" />
   </ItemGroup>
 </Project>
