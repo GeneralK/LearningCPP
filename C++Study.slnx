@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="HelloWorld/HelloWorld.vcxproj" Id="b74dc49d-9af3-41a0-894e-a6a96fd47271" />
+  <Project Path="PetSim/PetSim.vcxproj" Id="96d636ae-aff4-452f-aa99-e844df6a0ab3" />
 </Solution>
