@@ -52,6 +52,14 @@ public:
 	void shower(Pet& pet) {
 		pet.cleanPet(25);
 	}
+
+	void menu(int choice) { // WIP
+		switch (choice) {
+		case 1: shower();
+		case 2: 0;
+
+		}
+	}
 };
 
 int main() {
@@ -60,5 +68,10 @@ int main() {
 	Activities activities;
 	activities.shower(pet1);
 	cout << pet1.displayStats(Pet::statHygiene);
+	cout << "what would you like to do?";
+	cin >> activities.menu(); //WIP
+	
+
+
 	return 0;
 }
