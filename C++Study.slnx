@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="Calculator/Calculator.vcxproj" Id="79f55517-2895-40f3-a232-d70901a01b62" />
+  <Project Path="Gui/Gui.vcxproj" Id="e90ff80b-b3a0-46ac-80e9-546b1ccabf15" />
   <Project Path="HelloWorld/HelloWorld.vcxproj" Id="b74dc49d-9af3-41a0-894e-a6a96fd47271" />
   <Project Path="myLib/myLib.vcxproj" Id="d8c880d2-b535-4e40-a026-ca429b2c492c" />
   <Project Path="PetSim/PetSim.vcxproj" Id="96d636ae-aff4-452f-aa99-e844df6a0ab3" />

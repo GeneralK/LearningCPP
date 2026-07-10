@@ -8,3 +8,8 @@
 void fnmyLib()
 {
 }
+
+int calcTest(int x) {
+	x += 2;
+	return x;
+}
