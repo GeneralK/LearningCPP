@@ -6,6 +6,7 @@
 #include "imgui.h"
 #include "backend/imgui_impl_win32.h"
 #include "backend/imgui_impl_dx11.h"
+#include "misc/cpp/imgui_stdlib.h"
 #include <d3d11.h>
 #include <tchar.h>
 
@@ -86,7 +87,10 @@ int main(int, char**)
     // Our state
     bool show_demo_window = true;
     bool show_another_window = false;
+    bool show_calculator = true;
+    bool focus_calculator = true; //focus on the input field
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
 
     // Main loop
     bool done = false;
@@ -141,6 +145,7 @@ int main(int, char**)
             ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
             ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
             ImGui::Checkbox("Another Window", &show_another_window);
+            ImGui::Checkbox("Calculator", &show_calculator);
 
             ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
             ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
@@ -165,36 +170,39 @@ int main(int, char**)
         }
 
         //My Math window
+        if (show_calculator)
         {
-            ImGui::Begin("Math");   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-            ImGui::Text("Math Window");
+            ImGui::Begin("Calculator", &show_calculator);   
 
-            // Testing how to display stuff
-            static char str0[128] = "Hello, world!";
-            ImGui::InputText("input text", str0, IM_COUNTOF(str0));
-            ImGui::SameLine(); HelpMarker(
-                "Test");
+            static char str1[128] = "";
+            if (ImGui::Button("Close Me")) {
+                ImGui::SetKeyboardFocusHere();
+            }
+            if (focus_calculator) {
+                ImGui::SetKeyboardFocusHere();
+                focus_calculator = false;
+            }
+            else { if (!focus_calculator&&show_calculator) // fix this next time. Trying to toggle the focus on whenever the window is called.
+                focus_calculator = true;
+            }
+            
+            ImGui::InputTextWithHint("input text (w/ hint)", "enter text here", str1, IM_COUNTOF(str1));
 
-            struct funcs { static bool IsLegacyNativeDupe(ImGuiKey) { return false; } };
-            ImGuiKey start_key = ImGuiKey_NamedKey_BEGIN;
-            ImGui::Text("Keys down:");         for (ImGuiKey key = start_key; key < ImGuiKey_NamedKey_END; key = (ImGuiKey)(key + 1)) { if (funcs::IsLegacyNativeDupe(key) || !ImGui::IsKeyDown(key)) continue; ImGui::SameLine(); ImGui::Text((key < ImGuiKey_NamedKey_BEGIN) ? "\"%s\"" : "\"%s\" %d", ImGui::GetKeyName(key), key); }
 
-            //Working on live display for the calculator
-            static char liveDisplay[32] = ""; 
-            ImGui::InputText("hexadecimal", liveDisplay, IM_COUNTOF(liveDisplay), ImGuiInputTextFlags_CharsHexadecimal | ImGuiInputTextFlags_CharsUppercase);
-            ImGui::InputText("input text", str0, IM_COUNTOF(str0));
 
-            ImGuiKey_A;
-            ImGuiKey pog = ImGuiKey_NamedKey_BEGIN;
-            for (ImGuiKey pog = start_key; pog < ImGuiKey_NamedKey_END; pog = (ImGuiKey)(pog + 1)) { if (funcs::IsLegacyNativeDupe(pog) || !ImGui::IsKeyDown(pog)) continue; ImGui::SameLine(); ImGui::Text((pog < ImGuiKey_NamedKey_BEGIN) ? "\"%s\"" : "\"%s\" %d", ImGui::GetKeyName(pog), pog); }
-            ImGui::GetKeyName(pog);
 
             /*
                          to do : take the keys value from ImGuiKey enum and filter only for numerical and special characters like *%/
                             solution: Create my own enum of only those values. 
                          Idea is to show what you're typing, while eliminating unintended inputs.
+
+                         to do #2 : Oh I also need to consider when the input capture gets enabled.
+                         Use a if to toggle the window. If window open, start capturing inputs.
+
                          Scientitfic calculator in the future if I can figure out how to do this first.
                          Adding buttons - WIP I want them to change color as people press keys. Similar to :onHover in css
+
+
             */
 
             ImGui::End();

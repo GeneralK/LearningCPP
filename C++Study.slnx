@@ -8,4 +8,5 @@
   <Project Path="HelloWorld/HelloWorld.vcxproj" Id="b74dc49d-9af3-41a0-894e-a6a96fd47271" />
   <Project Path="myLib/myLib.vcxproj" Id="d8c880d2-b535-4e40-a026-ca429b2c492c" />
   <Project Path="PetSim/PetSim.vcxproj" Id="96d636ae-aff4-452f-aa99-e844df6a0ab3" />
+  <Project Path="SizeOf Test/SizeOf Test.vcxproj" Id="e34e5921-1be4-4834-a234-e5769b0d2331" />
 </Solution>
