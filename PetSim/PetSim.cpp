@@ -49,13 +49,13 @@ public:
 
 class Activities {
 public:
-	void shower(Pet& pet) {
+	void shower(Pet &pet) {
 		pet.cleanPet(25);
 	}
 
 	void menu(int choice) { // WIP
 		switch (choice) {
-		case 1: shower();
+		case 1:0;
 		case 2: 0;
 
 		}
@@ -67,9 +67,8 @@ int main() {
 	pet1.namePet();
 	Activities activities;
 	activities.shower(pet1);
-	cout << pet1.displayStats(Pet::statHygiene);
+	cout << pet1.displayStats(Pet::statHygiene) << "\n";
 	cout << "what would you like to do?";
-	cin >> activities.menu(); //WIP
 	
 
 

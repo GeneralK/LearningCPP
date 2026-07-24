@@ -176,14 +176,14 @@ int main(int, char**)
 
             static char str1[128] = "";
             if (ImGui::Button("Close Me")) {
-                ImGui::SetKeyboardFocusHere();
+                show_calculator = false;
             }
             if (focus_calculator) {
                 ImGui::SetKeyboardFocusHere();
-                focus_calculator = false;
             }
-            else { if (!focus_calculator&&show_calculator) // fix this next time. Trying to toggle the focus on whenever the window is called.
-                focus_calculator = true;
+            else {
+                if (!focus_calculator && show_calculator) // fix this next time. Trying to toggle the focus on whenever the window is called.
+                    show_calculator = false;
             }
             
             ImGui::InputTextWithHint("input text (w/ hint)", "enter text here", str1, IM_COUNTOF(str1));
