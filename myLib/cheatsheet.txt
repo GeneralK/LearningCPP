@@ -1,0 +1,12 @@
+This file currently resides in myLib, but might move in the future.
+My goal is to keep useful functions, short hands, and stuff here.
+
+std::array<int, 4> primes = { 2, 3, 5, 7 };
+for (const auto& s : primes) // const auto statement taken from https://en.cppreference.com/cpp/container/array
+	{
+		if (X == s) // make sure to use logic operator ==, not = ...
+		{
+		
+		}
+	}
+This rotates through elements in array
