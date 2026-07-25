@@ -197,4 +197,9 @@ From what I understand, here are the parts that matters / must have:
 }
 // [821UYH] 
 
+7.25.26
+I didnt really mess up anything today. But I'm learning how to separate commits.
+Make smaller commits is a better habit than one large commmit.
+Easier for code review and looking back on projects.
 
+You cannot dynamically create individual class member variables with a loop in C++
