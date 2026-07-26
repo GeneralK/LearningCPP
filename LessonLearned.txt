@@ -203,3 +203,16 @@ Make smaller commits is a better habit than one large commmit.
 Easier for code review and looking back on projects.
 
 You cannot dynamically create individual class member variables with a loop in C++
+
+Figured out how to add a file that's in the root solution folder, but outside of any projects, into VS Community Solution Explorer view.
+I just had to right click on the solution >> Add >> "Existing Item"
+
+This is a string array:
+std::string answer[20];
+if I want to update the elements inside, i dont use std::string answer[1].
+
+It is sufficient to use:
+answer[1] = xyz, answer[2]= zyx, etc.
+
+std::string answer[1] means that I'm redeclaring the array instead of assigning values to its elements.
+Compiler sees this as "Create a new array named answer with 1 element."

@@ -1,6 +1,7 @@
 This file currently resides in myLib, but might move in the future.
 My goal is to keep useful functions, short hands, and stuff here.
 
+#1
 std::array<int, 4> primes = { 2, 3, 5, 7 };
 for (const auto& s : primes) // const auto statement taken from https://en.cppreference.com/cpp/container/array
 	{
@@ -10,3 +11,24 @@ for (const auto& s : primes) // const auto statement taken from https://en.cppre
 		}
 	}
 This rotates through elements in array
+
+#2
+std :: vector<int> v(10);
+std :: random_device rd;
+std :: iota(v.begin(), v.end(), 1);
+std :: ranges :: shuffle(v, rd);
+for(auto i : V) I
+{
+	std :: cout << i << " ";
+}
+
+This creates a int vector of 10 elements.
+populates vector with values 1 - 10. 
+Then shuffles the order of the elements.
+
+#3 Random Number Generator. Swap out distribution models & parameter as necessary
+std::random_device rd;
+std::mt19937 generator(rd());
+std::uniform_real_distribution<double> dist(0.0, 1.0);
+std::cout << dist(generator) << "\n";
+
