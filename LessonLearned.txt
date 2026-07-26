@@ -216,3 +216,27 @@ answer[1] = xyz, answer[2]= zyx, etc.
 
 std::string answer[1] means that I'm redeclaring the array instead of assigning values to its elements.
 Compiler sees this as "Create a new array named answer with 1 element."
+
+
+7.26.26
+Learned about "Most Vexing Parse"
+
+The most vexing parse in C++ is a syntax ambiguity where a statement can be interpreted as either a variable/object initialization or a function declaration, 
+and the compiler always chooses the function declaration interpretation. 
+It was named by Scott Meyers in 2001 and commonly occurred in C++ versions before C++11, which introduced brace initialization to avoid the issue
+
+example:
+class magicBall {
+	
+private:
+	std::random_device rd;
+	std::mt19937 generator(rd());
+	std::uniform_int_distribution<int> dist(1, 20);
+
+solution:
+class magicBall {
+	
+private:
+	std::random_device rd;
+	std::mt19937 generator{rd()};
+	std::uniform_int_distribution<int> dist{1, 20};

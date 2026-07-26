@@ -9,6 +9,13 @@ Project idea from codecademy.com
 #include <random>
 
 class magicBall {
+	
+private:
+	std::random_device rd;
+	std::mt19937 generator{ rd() };
+	std::uniform_int_distribution<int> dist{ 1, 20 }; // dist is a distribution object, not a number.
+	int randomIndex = dist(generator); // I cannot do this: std::cout << answer[{dist}];
+	
 	std::string answer[20]{
 		"It is certain.",
 		"It is decidedly so.",
@@ -32,15 +39,16 @@ class magicBall {
 		"Very doubtful.",
 	};
 
+public:
 	void ballReply() {
-		//should I randomize on top of the standard c++ randomize
-		std::cout << answer[1];
+		std::cout << answer[randomIndex];
 	}
 };
 
 int main() {
+	std::string userInput; // Not sure if this is necessary?
 	magicBall ball1;
+	std::cout << "What is your question today?\n";
+	std::cin >> userInput;
 	ball1.ballReply();
-
-
 }
