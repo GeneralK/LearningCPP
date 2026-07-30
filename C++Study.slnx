@@ -7,6 +7,7 @@
     <File Path="LessonLearned.txt" />
   </Folder>
   <Project Path="Calculator/Calculator.vcxproj" Id="79f55517-2895-40f3-a232-d70901a01b62" />
+  <Project Path="Exercises/Exercises.vcxproj" Id="503fa51b-965d-4616-add9-2e6bd889260c" />
   <Project Path="Gui/Gui.vcxproj" Id="e90ff80b-b3a0-46ac-80e9-546b1ccabf15" />
   <Project Path="HelloWorld/HelloWorld.vcxproj" Id="b74dc49d-9af3-41a0-894e-a6a96fd47271" />
   <Project Path="Magic8Ball/Magic8Ball.vcxproj" Id="5003aa5c-c3d5-464c-a482-9d6765596bbf" />
