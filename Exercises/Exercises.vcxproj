@@ -142,6 +142,7 @@
     <ClCompile Include="Exercise00-SizeOf.cpp" />
     <ClCompile Include="Exercise01-TriangularNum.cpp" />
     <ClCompile Include="Exercise02-ASCIIstaticCast.cpp" />
+    <ClCompile Include="Exercise03-SimplePrimeQA.cpp" />
     <ClCompile Include="ExerciseLauncher.cpp" />
   </ItemGroup>
   <ItemGroup>

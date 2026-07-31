@@ -13,5 +13,4 @@
   <Project Path="Magic8Ball/Magic8Ball.vcxproj" Id="5003aa5c-c3d5-464c-a482-9d6765596bbf" />
   <Project Path="myLib/myLib.vcxproj" Id="d8c880d2-b535-4e40-a026-ca429b2c492c" />
   <Project Path="PetSim/PetSim.vcxproj" Id="96d636ae-aff4-452f-aa99-e844df6a0ab3" />
-  <Project Path="SimplePrimeQA/SimplePrimeQA.vcxproj" Id="3506ca37-df39-476b-b00b-57d4c119dbec" />
 </Solution>

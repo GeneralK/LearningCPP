@@ -4,7 +4,9 @@
 #include "Exercise01.h"
 #include <iostream>
 
+void Exercise03();
 
 int main() {
-
+	Exercise03();
+	return 0;
 }

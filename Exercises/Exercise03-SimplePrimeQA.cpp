@@ -33,12 +33,11 @@ bool isPrime()
 	return false;
 }
 
-int main()
+void Exercise03()
 {
 	while (isPrime() != true)
 	{
-		std::cout << "The digit is not prime.\n" << "\n"; // the extra \n is for visuals only
+		std::cout << "The digit is not prime, or out of range!\n" << "\n"; // the extra \n is for visuals only
 	}
 	std::cout << "The digit is prime!\n" << "\n"; // the extra \n is for visuals only
-	return 0;
 }
