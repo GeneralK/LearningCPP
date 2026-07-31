@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Exercise-main.cpp" />
-    <ClCompile Include="Exercises01.cpp" />
+    <ClCompile Include="Exercise01.cpp" />
+    <ClCompile Include="Exercises99.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Exercise01.h" />
+    <ClInclude Include="Exercise-main.h" />
+    <ClInclude Include="Exercise99.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
