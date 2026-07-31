@@ -18,13 +18,13 @@
     <ClCompile Include="Exercise02-ASCIIstaticCast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ExerciseLauncher.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Exercise01-TriangularNum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Exercise00-SizeOf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseLauncher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
