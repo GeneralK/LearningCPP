@@ -4,6 +4,7 @@
 #include "Exercise01.h"
 #include <iostream>
 
+
 int main() {
-	Exercise01();
+	
 }

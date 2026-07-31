@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Exercises99.cpp">
+    <ClCompile Include="Exercise02-ASCIIstaticCast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise-main.cpp">
+    <ClCompile Include="ExerciseLauncher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise01.cpp">
+    <ClCompile Include="Exercise01-TriangularNum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise00-SizeOf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Exercise99.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Exercise-main.h">
+    <ClInclude Include="Exercise01.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

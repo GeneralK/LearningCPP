@@ -2,7 +2,7 @@
 #include <iostream>
 #include <climits> // for CHAR_BIT
 
-int main()
+void Exercise00()
 {
     std::cout << "A byte is " << CHAR_BIT << " bits\n\n";
 
@@ -17,6 +17,4 @@ int main()
     std::cout << std::setw(16) << "float:" << sizeof(float) << " bytes\n";
     std::cout << std::setw(16) << "double:" << sizeof(double) << " bytes\n";
     std::cout << std::setw(16) << "long double:" << sizeof(long double) << " bytes\n";
-
-    return 0;
 }

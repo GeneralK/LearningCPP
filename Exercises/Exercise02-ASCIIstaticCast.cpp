@@ -10,7 +10,7 @@ You entered 'a', which has ASCII code 97.
 
 
 
-void Exercise01() {
+void Exercise02() {
 	char userAnswer{ '0' };
 	std::cout << "Enter a single character:";
 	std::cin >> userAnswer;

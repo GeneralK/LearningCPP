@@ -139,13 +139,13 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Exercise-main.cpp" />
-    <ClCompile Include="Exercise01.cpp" />
-    <ClCompile Include="Exercises99.cpp" />
+    <ClCompile Include="Exercise00-SizeOf.cpp" />
+    <ClCompile Include="ExerciseLauncher.cpp" />
+    <ClCompile Include="Exercise01-TriangularNum.cpp" />
+    <ClCompile Include="Exercise02-ASCIIstaticCast.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Exercise-main.h" />
-    <ClInclude Include="Exercise99.h" />
+    <ClInclude Include="Exercise01.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
