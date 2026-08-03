@@ -30,6 +30,9 @@
     <ClCompile Include="Exercise03-SimplePrimeQA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise04-SimpleCalc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Exercise01.h">
