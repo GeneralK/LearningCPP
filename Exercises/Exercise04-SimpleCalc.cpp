@@ -12,7 +12,21 @@ Source: LearnCPP - 4.x Chapter Summary
 
 
 void Exercise04() {
-	int base{ 0 }; // base of triangle
+	double userInput1{ 0 };
+	double userInput2{ 0 }; 
+	char operate{ 0 }; 
 
+	std::cout << "Enter a double value: \n";
+	std::cin >> userInput1;
+	std::cout << "Enter a 2nd double value: \n";
+	std::cin >> userInput2;
+	std::cout << "Enter +, -, *, or /: \n";
+	std::cin >> operate;
 }
 
+
+// at this point, Im wondering how I can create a function that dynamically create & return different data types.
+// the point is to reuse it to validate input for userInput & operate.
+// apparently I need to learn about runtime & compile time, and probably templating. 
+
+//Remark: I like how input validation is like chapter 28 on the LearnCPP website... It's ludicrously detailed site...
