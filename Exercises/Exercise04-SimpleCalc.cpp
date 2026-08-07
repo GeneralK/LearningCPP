@@ -17,21 +17,30 @@ struct mathCalc {
 	char operate{ 0 };
 	double result{ 0 };
 
-	mathCalc doMath(float a, float b, char c) {
+	void askInput(){
+		std::cout << "Enter a double value: \n";
+		std::cin >> userInput1;
+		std::cout << "Enter another double value: \n";
+		std::cin >> userInput2;
+		std::cout << "Enter +, -, *, or /: \n";
+		std::cin >> operate;
+	};
+
+	void doMath(double a, double b, char c) {
 		userInput1 = a;
 		userInput2 = b;
 		operate = c;
 			if (c == '+') {	//reminder single qoute = single character; double qoute = string.
-				return { result = a+b };
+				result = a+b;
 			}
 			else if (c == '-') {
-
+				result = a - b;
 			}
 			else if (c == '*') {
-
+				result = a * b;
 			}
 			else if (c == '/') {
-
+				result = a / b;
 			}
 			else {
 				std::cout << "Please input a valid operator\n";
@@ -41,9 +50,9 @@ struct mathCalc {
 
 
 void Exercise04() {
-
 	mathCalc test1;
-	test1.doMath(1, 2, '+');
+	test1.askInput();
+	test1.doMath(test1.userInput1, test1.userInput2, test1.operate);
 	std::cout << std::format("{} {} {} is {}", test1.userInput1, test1.operate, test1.userInput2, test1.result);
 
 	
