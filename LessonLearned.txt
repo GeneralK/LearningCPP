@@ -245,3 +245,12 @@ private:
 I havent made a mistake, but more so for myself reading in the future.
 I need to learn about whats present at runtime vs compile time, if I wish to create a function with a dynamic return type. (i.e if I want the return type to match parameter type)
 I would also most likely need to learn about templating. Something about generics?
+
+8.6.26
+Exer04 Change: 
+Reminder that struct member function's parameters, IF IT CREATES A NEW OBJECT, will initalize according to struct member order
+Restructured the whole code cause I keep getting C4715 error... Didn't realize sometimes you have to run the code to clear cache.
+Also learned using the name of struct as modifier / prefix to a function means im create a duplicate of the object. 
+Since Im just updating the object itself, I should use void as modifier for member function.
+Also, std::format is CLUTCH!
+std::cout << std::format("{} {} {} is {}", test1.userInput1, test1.operate, test1.userInput2, test1.result);

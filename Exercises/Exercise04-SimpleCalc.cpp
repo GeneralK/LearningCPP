@@ -12,7 +12,7 @@ Source: LearnCPP - 4.x Chapter Summary
 #include <format> // this library for std::format
 
 struct mathCalc {
-	double userInput1{ 0 };	//reminder that parameters will initalize in the same format as member order
+	double userInput1{ 0 };	//Reminder that struct member function's parameters, IF IT CREATES A NEW OBJECT, will initalize according to struct member order
 	double userInput2{ 0 };	// ie. if char operate was at the top, parameter a in doMath() will be seen as char...
 	char operate{ 0 };
 	double result{ 0 };
