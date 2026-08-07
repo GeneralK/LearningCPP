@@ -9,19 +9,43 @@ Source: LearnCPP - 4.x Chapter Summary
 */
 
 #include <iostream>
+#include <format> // this library for std::format
+
+struct mathCalc {
+	char operate[4]{ '+','-','*','/'};
+	double userInput1{ 0 };
+	double userInput2{ 0 };
+	double result{ 0 };
+
+	mathCalc doMath(float a, float b, char c) {
+		for (char c : operate) {
+			if (c == '+') {	//reminder single qoute = single character; double qoute = string.
+				result = a + b;
+				std::cout << std::format("{} {} {} is {}", a, c, b, result);
+			}
+			else if (c == '-') {
+
+			}
+			else if (c == '*') {
+
+			}
+			else if (c == '/') {
+
+			}
+			else {
+				std::cout << "Please input a valid operator\n";
+			}
+		}
+	}
+};
 
 
 void Exercise04() {
-	double userInput1{ 0 };
-	double userInput2{ 0 }; 
-	char operate{ 0 }; 
 
-	std::cout << "Enter a double value: \n";
-	std::cin >> userInput1;
-	std::cout << "Enter a 2nd double value: \n";
-	std::cin >> userInput2;
-	std::cout << "Enter +, -, *, or /: \n";
-	std::cin >> operate;
+	mathCalc test1;
+	test1.doMath(1, 2, '+');
+
+	
 }
 
 
