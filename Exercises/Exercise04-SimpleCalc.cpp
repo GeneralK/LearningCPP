@@ -12,16 +12,14 @@ Source: LearnCPP - 4.x Chapter Summary
 #include <format> // this library for std::format
 
 struct mathCalc {
-	char operate[4]{ '+','-','*','/'};
 	double userInput1{ 0 };
 	double userInput2{ 0 };
+	char operate[4]{ '+','-','*','/' };
 	double result{ 0 };
 
 	mathCalc doMath(float a, float b, char c) {
-		for (char c : operate) {
 			if (c == '+') {	//reminder single qoute = single character; double qoute = string.
-				result = a + b;
-				std::cout << std::format("{} {} {} is {}", a, c, b, result);
+				return { a+b };
 			}
 			else if (c == '-') {
 
@@ -36,7 +34,6 @@ struct mathCalc {
 				std::cout << "Please input a valid operator\n";
 			}
 		}
-	}
 };
 
 
@@ -44,6 +41,7 @@ void Exercise04() {
 
 	mathCalc test1;
 	test1.doMath(1, 2, '+');
+	std::cout << std::format("{} {} {} is {}", a, c, b, result);
 
 	
 }
