@@ -254,3 +254,20 @@ Also learned using the name of struct as modifier / prefix to a function means i
 Since Im just updating the object itself, I should use void as modifier for member function.
 Also, std::format is CLUTCH!
 std::cout << std::format("{} {} {} is {}", test1.userInput1, test1.operate, test1.userInput2, test1.result);
+
+8.7.26
+Maybe its time to rename the file to just "ILearned".
+But, here's what I learned today:
+std::format has a general syntax for floating-point precision in std::format is :.Nf, where
+: introduces the format specifier.
+
+.N specifies the precision (number of digits after the decimal point).
+
+f indicates fixed-point notation (always showing a decimal point and N digits after it).
+
+Credit: https://iifx.dev/en/articles/457652154/from-std-setprecision-to-std-format-modern-c-floating-point-output
+
+//#include <iomanip> // This is for setting decimal places for output via setprecision(), but only for std::ostringstream / std::cout
+//#include <cmath> // There's a pow() function inside cmath.
+
+Also learned from my friend that i++ is less efficient than ++i due to assembly code generated.
