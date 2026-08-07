@@ -12,14 +12,17 @@ Source: LearnCPP - 4.x Chapter Summary
 #include <format> // this library for std::format
 
 struct mathCalc {
-	double userInput1{ 0 };
-	double userInput2{ 0 };
-	char operate[4]{ '+','-','*','/' };
+	double userInput1{ 0 };	//reminder that parameters will initalize in the same format as member order
+	double userInput2{ 0 };	// ie. if char operate was at the top, parameter a in doMath() will be seen as char...
+	char operate{ 0 };
 	double result{ 0 };
 
 	mathCalc doMath(float a, float b, char c) {
+		userInput1 = a;
+		userInput2 = b;
+		operate = c;
 			if (c == '+') {	//reminder single qoute = single character; double qoute = string.
-				return { a+b };
+				return { result = a+b };
 			}
 			else if (c == '-') {
 
@@ -41,7 +44,7 @@ void Exercise04() {
 
 	mathCalc test1;
 	test1.doMath(1, 2, '+');
-	std::cout << std::format("{} {} {} is {}", a, c, b, result);
+	std::cout << std::format("{} {} {} is {}", test1.userInput1, test1.operate, test1.userInput2, test1.result);
 
 	
 }
