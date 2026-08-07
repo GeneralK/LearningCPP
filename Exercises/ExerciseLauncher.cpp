@@ -2,12 +2,12 @@
 // Going forward, this will act as a launcher more or less. No cases / switches at this point.
 // To use, forward declare the .cpp function you want to run. Then include the function in main.
 
-#include "Exercise01.h"
+
 #include <iostream>
 
-void Exercise04();
+void Exercise05();
 
 int main() {
-	Exercise04();
+	Exercise05();
 	return 0;
 }
