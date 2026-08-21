@@ -11,22 +11,23 @@ David Jenkins (age 44) is older than John Bacon (age 37).
 
 #include <iostream>
 #include <format>
+#include <string>
 
 struct person {
 	int age{ 0 };
 	std::string name{ 0 };
 
 	void inputInfo() {
-		std::cout << "Gimme name";
-		std::cin >> this->name;
-		std::cout << "Gimme age";
+		std::cout << "Enter the name of the person: "; // I wonder if there's a way for structs to detect if another struct of the same type has been declared.
+		std::getline(std::cin >> std::ws, this->name);					// Then use if statement to bump the value to n+1 for "person #n+1", where n = # of pre-existing person instances.
+		std::cout << "Enter the age of the person:"; // Quick search seems to show that unorded_set and vector is the way to go.
 		std::cin >> this->age;
 	}
 };
 
 void comparePersonAge(person a, person b) {
 	if (a.age > b.age) {
-		std::cout << std::format ("{} (age {}) is older than {} ( age {})", a.name,a.age,b.name,b.age);
+		std::cout << std::format ("{} (age {}) is older than {} (age {})", a.name,a.age,b.name,b.age);
 	}
 };
 
