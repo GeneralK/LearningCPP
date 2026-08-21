@@ -27,7 +27,16 @@ struct person {
 
 void comparePersonAge(person a, person b) {
 	if (a.age > b.age) {
-		std::cout << std::format ("{} (age {}) is older than {} (age {})", a.name,a.age,b.name,b.age);
+		std::cout << std::format("{} (age {}) is older than {} (age {}.)", a.name, a.age, b.name, b.age);
+	}
+	else if (b.age > a.age) {
+		std::cout << std::format("{} (age {}) is older than {} (age {}.)", b.name, b.age, a.name, a.age);
+	}
+	else if (a.age == b.age) {
+		std::cout << "They the same age man.";
+	}
+	else {
+		std::cout << "We got issues boss man. Check something";
 	}
 };
 
@@ -37,5 +46,4 @@ void Exercise06() {
 	person1.inputInfo();
 	person2.inputInfo();
 	comparePersonAge(person1, person2);
-
 }
