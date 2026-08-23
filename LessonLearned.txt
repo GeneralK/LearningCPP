@@ -271,3 +271,6 @@ Credit: https://iifx.dev/en/articles/457652154/from-std-setprecision-to-std-form
 //#include <cmath> // There's a pow() function inside cmath.
 
 Also learned from my friend that i++ is less efficient than ++i due to assembly code generated.
+
+8.23.26
+Learned that you can add "filter" to a project, which looks like a folder. 
