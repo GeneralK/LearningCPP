@@ -35,6 +35,6 @@ void Exercise07() {
 		std::cout << numberInput << " is even";
 	}
 	else if (!isEven(numberInput)) {
-		std::cout << numberInput << " is odd";
+		std::cout << numberInput << " is odd / or you've entered a letter";
 	};
 }
