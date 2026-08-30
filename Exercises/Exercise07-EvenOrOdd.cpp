@@ -6,11 +6,17 @@ Use the remainder operator to test whether the integer parameter is even.
 Make sure isEven() works with both positive and negative numbers.
 */
 
+/*
+The solution given by LearnCPP for this lesson is not the best... It's just visually demonstrating C++'s compile time
+evaluation rather than giving a meaningful example... The variable holding user input is only obtainable during runtime.
+And the example doesnt include a " constexpr int myNumber {12} " to use for isEven()...
+In other words, this exercise would just be a regular run-time function with constant expression sprinkled in for visuals...
+*/
+
 #include <iostream>
-#include <format>
 #include <string>
 
-constexpr int numberInput{ 0 };
+int numberInput { 0 };
 
 constexpr bool isEven(int numberInput) {
 	if (numberInput % 2 == 0) {
@@ -21,18 +27,14 @@ constexpr bool isEven(int numberInput) {
 	}
 }
 
-void userInput() {
-	std::cout << "Enter an integer: ";
-	std::cin >> constexpr numberInput;
-	if (isEven(numberInput)) {
-		std::cout << numberInput << "is even";
-	} else if (!isEven(numberInput)) {
-		std::cout << numberInput << "is odd";
-	};
-}
 
 void Exercise07() {
-
-
-
+	std::cout << "Enter an integer: ";
+	std::cin >> numberInput;
+	if (isEven(numberInput)) {
+		std::cout << numberInput << " is even";
+	}
+	else if (!isEven(numberInput)) {
+		std::cout << numberInput << " is odd";
+	};
 }
