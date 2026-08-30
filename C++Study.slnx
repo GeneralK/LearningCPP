@@ -13,5 +13,6 @@
   <Project Path="Magic8Ball/Magic8Ball.vcxproj" Id="5003aa5c-c3d5-464c-a482-9d6765596bbf" />
   <Project Path="myLib/myLib.vcxproj" Id="d8c880d2-b535-4e40-a026-ca429b2c492c" />
   <Project Path="PetSim/PetSim.vcxproj" Id="96d636ae-aff4-452f-aa99-e844df6a0ab3" />
+  <Project Path="RaylibSandbox/RaylibSandbox.vcxproj" Id="7a442dc2-a204-44e5-a99b-f1025e1f5b40" />
   <Project Path="SnakeGame/SnakeGame.vcxproj" Id="04e37472-30b5-4088-8542-67ad118bcfa3" />
 </Solution>
