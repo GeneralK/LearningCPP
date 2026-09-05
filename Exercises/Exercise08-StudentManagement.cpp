@@ -36,8 +36,53 @@ Source: https://github.com/MirYeasirAbrar
 
 #include <iostream>
 #include <string>
+#include <format>
 
-//
+
+// need to keep track of total students.
+// need switch for menu
+// practice namespace separation. Maybe Create | View | Delete
+namespace student {
+	struct student {
+
+	};
+}
+
+namespace student::create {
+	
+}
+
+namespace student::view {
+	void menue(int userInput) {
+		/*
+		insert menue display here
+		
+		*/
+		switch (userInput) {
+        case 1:
+          // Do other scope stuff
+            break;
+		case 2:
+			//
+			break;
+		case 3:
+			//
+			break;
+		case 4:
+			//
+			break;
+		case 5:
+			//
+			break;
+		}
+
+	}
+}
+
+namespace student::del {
+
+}
+
 
 
 void Exercise08() {
