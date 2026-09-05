@@ -13,6 +13,11 @@ And the example doesnt include a " constexpr int myNumber {12} " to use for isEv
 In other words, this exercise would just be a regular run-time function with constant expression sprinkled in for visuals...
 */
 
+/*
+The lesson from 6.7 Relational operators and floating point comparisons | Comparing floating point numbers (advanced / optional reading)
+There are better example of compile time evaluation there.
+*/
+
 #include <iostream>
 #include <string>
 

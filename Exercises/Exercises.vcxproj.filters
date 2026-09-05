@@ -42,6 +42,9 @@
     <ClCompile Include="Exercise07-EvenOrOdd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise08-StudentManagement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Exercise01.h">

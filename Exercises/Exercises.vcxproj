@@ -147,6 +147,7 @@
     <ClCompile Include="Exercise05-BallDrop.cpp" />
     <ClCompile Include="Exercise06-AgeCompare.cpp" />
     <ClCompile Include="Exercise07-EvenOrOdd.cpp" />
+    <ClCompile Include="Exercise08-StudentManagement.cpp" />
     <ClCompile Include="ExerciseLauncher.cpp" />
   </ItemGroup>
   <ItemGroup>
