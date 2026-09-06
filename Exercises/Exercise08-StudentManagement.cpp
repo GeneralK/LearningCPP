@@ -43,25 +43,41 @@ Source: https://github.com/MirYeasirAbrar
 // need switch for menu
 // practice namespace separation. Maybe Create | View | Delete
 namespace student {
-	struct student {
+	class student {
+		int Roll{ 0 };
+		int CGPA{ 0 };
+
+	public:
+		std::string name{ 0 };
 
 	};
 }
 
 namespace student::create {
-	
+
 }
 
 namespace student::view {
-	void menue(int userInput) {
-		/*
-		insert menue display here
-		
-		*/
-		switch (userInput) {
-        case 1:
-          // Do other scope stuff
-            break;
+	void menue() {
+		std::cout << std::format(
+			R"(Prepared by: Name
+				 Batch: stuedents - roll
+				1: Add Student
+				2: Delete Student
+				3: Find by Name
+				4: Find by Roll
+				5: Show All Students
+				6: Update Student
+				7: Count Students
+				8: Exit
+
+				Enter a choice:)"
+		);
+
+		switch (0) {
+		case 1:
+			// Do other scope stuff
+			break;
 		case 2:
 			//
 			break;
@@ -84,8 +100,11 @@ namespace student::del {
 }
 
 
-
+//add in variable for namespace alias to future-proof
 void Exercise08() {
-
+	student::student Guy1;
+	std::cin >> Guy1.name;
+	std::cout << Guy1.name;
+	student::view::menue();
 
 }
