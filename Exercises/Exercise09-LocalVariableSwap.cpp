@@ -16,6 +16,8 @@ Learn CPP 7.3
 
 #include <string>
 #include <iostream>
+#include <optional> // library for handling function outcomes in C++17
+
 struct mySimpleCompare {
 	int smallerInt{ 0 };
 	int largerInt{ 0 };
@@ -30,13 +32,14 @@ void Exercise09() {
 
 
 
-int valueCompare(int a, int b) {
+std::optional<int> valueCompare(int a, int b) {
 	if (a == b) {
 		std::cout << "They are the same, please try again.";
+		return std::nullopt; 
 	}
 	return a > b ? a : b;
 }
 
-int valueSwap(int ) {
+int valueSwap(int comparisonResult) {
 
 }
