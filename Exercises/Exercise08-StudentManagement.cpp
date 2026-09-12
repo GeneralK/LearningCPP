@@ -42,7 +42,7 @@ Source: https://github.com/MirYeasirAbrar
 // need to keep track of total students.
 // need switch for menu
 // practice namespace separation. Maybe Create | View | Delete
-namespace student {
+namespace student { //debating if I really need to use namespace. I want to demonstrate I understand it. But the project is not big enough to warrant it.
 	class student {
 		int Roll{ 0 };
 		int CGPA{ 0 };
@@ -51,9 +51,6 @@ namespace student {
 		std::string name{ 0 };
 
 	};
-}
-
-namespace student::create {
 
 }
 
@@ -95,9 +92,6 @@ namespace student::view {
 	}
 }
 
-namespace student::del {
-
-}
 
 
 //add in variable for namespace alias to future-proof
