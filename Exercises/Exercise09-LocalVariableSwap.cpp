@@ -16,30 +16,45 @@ Learn CPP 7.3
 
 #include <string>
 #include <iostream>
-#include <optional> // library for handling function outcomes in C++17
+//#include <optional> // library for handling function outcomes in C++17
+//Syntax: std::optional<int> structure::foo() { return std::nullopt; }
 
-struct mySimpleCompare {
+struct simpleCompare {
 	int smallerInt{ 0 };
 	int largerInt{ 0 };
-	int valueCompare(int a, int b);
-	int valueSwap();
+	void valueSwap();
+
 };
 
 
 void Exercise09() {
+	simpleCompare mysimpleCompare;
+	std::cout << "Enter an integer: \n";
+	std::cin >> mysimpleCompare.smallerInt;
+	std::cout << "Enter a larger integer: \n";
+	std::cin >> mysimpleCompare.largerInt;
+	mysimpleCompare.valueSwap();
+
 
 }
 
 
 
-std::optional<int> valueCompare(int a, int b) {
-	if (a == b) {
+void simpleCompare::valueSwap() {
+	if (smallerInt == largerInt) {
 		std::cout << "They are the same, please try again.";
-		return std::nullopt; 
 	}
-	return a > b ? a : b;
-}
-
-int valueSwap(int comparisonResult) {
-
+	if (smallerInt > largerInt) {
+		int swap{ 0 };
+		swap = largerInt;
+		largerInt = smallerInt;
+		smallerInt = swap;
+	}
+	else if (largerInt > smallerInt) {
+		int swap{ 0 };
+		swap = smallerInt;
+		smallerInt = largerInt;
+		largerInt = swap;
+	}
+	// return smallerInt > largerInt ? smallerInt : largerInt; //ternary operatory my beloved. I cannot use you everywhere. 
 }
