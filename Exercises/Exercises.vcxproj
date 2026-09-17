@@ -149,6 +149,7 @@
     <ClCompile Include="Exercise07-EvenOrOdd.cpp" />
     <ClCompile Include="Exercise08-StudentManagement.cpp" />
     <ClCompile Include="Exercise09-LocalVariableSwap.cpp" />
+    <ClCompile Include="Exercise10-StaticVariable.cpp" />
     <ClCompile Include="ExerciseLauncher.cpp" />
   </ItemGroup>
   <ItemGroup>
