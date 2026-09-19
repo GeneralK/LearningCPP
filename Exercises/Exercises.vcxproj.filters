@@ -51,6 +51,9 @@
     <ClCompile Include="Exercise10-StaticVariable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise11-SimpleCalcSwitch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Exercise01.h">

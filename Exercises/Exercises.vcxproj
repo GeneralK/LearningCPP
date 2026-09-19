@@ -150,6 +150,7 @@
     <ClCompile Include="Exercise08-StudentManagement.cpp" />
     <ClCompile Include="Exercise09-LocalVariableSwap.cpp" />
     <ClCompile Include="Exercise10-StaticVariable.cpp" />
+    <ClCompile Include="Exercise11-SimpleCalcSwitch.cpp" />
     <ClCompile Include="ExerciseLauncher.cpp" />
   </ItemGroup>
   <ItemGroup>
