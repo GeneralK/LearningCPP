@@ -5,9 +5,9 @@
 
 #include <iostream>
 
-void Exercise10();
+void Exercise11();
 
 int main() {
-	Exercise10();
+	Exercise11();
 	return 0;
 }
