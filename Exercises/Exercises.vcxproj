@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CreateMenu.cpp" />
     <ClCompile Include="Exercise00-SizeOf.cpp" />
     <ClCompile Include="Exercise01-TriangularNum.cpp" />
     <ClCompile Include="Exercise02-ASCIIstaticCast.cpp" />
