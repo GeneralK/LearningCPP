@@ -64,20 +64,23 @@ namespace loopExercise {
 		}
 		case 2:
 		{
+			int numb{ 5 };
 			int loop{ 1 };
-			while (loop <= 5)
+			const int TOTAL_LOOP{ numb };
+
+			while (loop <= TOTAL_LOOP)
+
 			{
-				int nums{ loop };
-				while (nums > 0)
+				while (numb > 0)
 				{
-
-					std::cout << nums << ' ';
-					--nums;
-
+					std::cout << numb << ' ';
+					--numb;
 				}
+				numb = TOTAL_LOOP - loop;
 				std::cout << '\n';
 				++loop;
 			}
+
 			break;
 		}
 		case 3: //Staircase Output, Right Aligned
@@ -85,7 +88,7 @@ namespace loopExercise {
 			int loop{ 1 };
 			while (loop <= 5)
 			{
-				for (int i = 5; i > loop; --i) {
+				for (int iii = 5; iii > loop; --iii) {
 					cout << "  ";
 				}
 				int nums{ loop };
@@ -106,7 +109,7 @@ namespace loopExercise {
 			int loop{ 1 };
 			while (loop <= 5)
 			{
-				for (int i = 0; i < 5 - loop; i++) {
+				for (int i = 0; i < 5 - loop; i++) { // 5 is magic number i suppose. Could replace it with a constant. Same goes for the loop in while statement
 					cout << " ";
 				}
 				/*
