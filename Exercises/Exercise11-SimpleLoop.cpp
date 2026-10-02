@@ -1,8 +1,9 @@
 /*
+LearnCPP 8.8 introduction-to-loops-and-while-statements
 Q#2
 Write a program that prints out the letters a through z along with their ASCII codes.
 Use a loop variable of type char.
-LearnCPP 8.8 introduction-to-loops-and-while-statements
+
 
 Q#3
 Invert the nested loops example so it prints the following:
@@ -19,6 +20,10 @@ Make the numbers print like this:
 	3 2 1
   4 3 2 1
 5 4 3 2 1
+
+8.10 — For statements
+Q#1
+Write a for-loop that prints every even number from 0 to 20.
 */
 
 
@@ -37,7 +42,7 @@ void Exercise11() {
 
 namespace loopExercise {
 	void menue() {
-		const int EXIT_MENU{ 5 }; // Which option is for exiting menu. Modify as necessary
+		const int EXIT_MENU{ 99 }; // Which option is for exiting menu. Modify as necessary
 		int menueChoice{ 0 };
 		cout << std::format(
 			R"(Which function to run?
@@ -45,7 +50,8 @@ namespace loopExercise {
 				2: Print 5 to 1, longest row first.
 				3: Print 1 first line. Right Aligned Staircase Shape
 				4: Print 1 first line. Pyramid Shape
-				5: Exit
+				5: Prints every even number from 0 to 20
+				99: Exit
 			
 				Enter a choice:)"
 		);
@@ -127,6 +133,18 @@ namespace loopExercise {
 				}
 				std::cout << '\n';
 				++loop;
+			}
+			break;
+		}
+		case 5:
+		{
+			for (int iii = 0;iii <= 20;++iii) {
+				if (!(iii % 2 == 0)) {
+					;
+				}
+				else {
+					cout << iii << " ";
+				}
 			}
 			break;
 		}
