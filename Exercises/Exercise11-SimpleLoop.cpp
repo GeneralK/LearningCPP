@@ -24,6 +24,14 @@ Make the numbers print like this:
 8.10 — For statements
 Q#1
 Write a for-loop that prints every even number from 0 to 20.
+
+Q#2
+Write a function named sumTo() that takes an integer parameter named value, and returns the sum of all the numbers from 1 to value.
+
+For example, sumTo(5) should return 15, which is 1 + 2 + 3 + 4 + 5.
+
+Hint: Use a non-loop variable to accumulate the sum as you iterate from 1 to the input value,
+much like the pow() example above uses the total variable to accumulate the return value each iteration.
 */
 
 
@@ -34,6 +42,7 @@ using std::cin;
 
 namespace loopExercise {
 	void menue();
+	long sumTo(int userInput); //forgot to add input parameter
 };
 
 void Exercise11() {
@@ -51,6 +60,7 @@ namespace loopExercise {
 				3: Print 1 first line. Right Aligned Staircase Shape
 				4: Print 1 first line. Pyramid Shape
 				5: Prints every even number from 0 to 20
+				6: Summation : nth Triangular Number
 				99: Exit
 			
 				Enter a choice:)"
@@ -148,11 +158,27 @@ namespace loopExercise {
 			}
 			break;
 		}
+		case 6:
+		{
+			int tempInputTriange{ 0 };
+			cout << "Type in an integer. \n";
+			cin >> tempInputTriange;
+			cout << "The total is: " << sumTo(tempInputTriange);
+			break;
+		}
 		case EXIT_MENU:
 			//Exits Program
 			break;
 		}
 
+	}
+	long sumTo(int userInput) {
+		// need a loop to use input. add everything together
+		long Total{ 0 };
+		for (int loop{ 0 }, inputValue{ userInput }; loop <= userInput; ++loop, --inputValue) { //apparently, I cant use int loop {}, int input value.
+			Total += inputValue;
+		}
+		return Total;
 	}
 }
 
