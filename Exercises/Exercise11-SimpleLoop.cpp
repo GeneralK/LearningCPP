@@ -68,6 +68,7 @@ namespace loopExercise {
 	void menue();
 	long sumTo(int userInput); //forgot to add input parameter
 	void fizzBuzz(int userInput);
+	void fizzBuzz7(int userInput);
 };
 
 void Exercise11() {
@@ -87,6 +88,7 @@ namespace loopExercise {
 				5: Prints every even number from 0 to 20
 				6: Summation : nth Triangular Number
 				7: FizzBuzz
+				8: FizzBuzz - Print "pop" for 7 divisibility
 				99: Exit
 			
 				Enter a choice:)"
@@ -200,6 +202,14 @@ namespace loopExercise {
 			fizzBuzz(tempInputFB);
 			break;
 		}
+		case 8:
+		{
+			int tempInputFB{ 0 };
+			cout << "Type in an integer. \n";
+			cin >> tempInputFB;
+			fizzBuzz7(tempInputFB);
+			break;
+		}
 		case EXIT_MENU:
 			//Exits Program
 			break;
@@ -229,6 +239,36 @@ namespace loopExercise {
 			else {
 				cout << iii <<"\n";
 			}
+		}
+	}
+	void fizzBuzz7(int userInput) {
+		//else cannot take a condition
+		bool track {0};
+		for (int iii = 1;iii <= userInput;++iii) { //apparently, I cant use int loop {}, int input value.
+			if (iii % 3 == 0 && iii % 5 == 0) {
+				cout << "fizzbuzz \n";
+			}
+
+			/*
+			
+			if (bool is false){
+
+
+			else if (iii % 3 == 0) {
+				cout << "fizz \n";
+			}
+			else if (iii % 5 == 0) {
+				cout << "buzz \n";
+			}
+			else if (iii % 7 == 0) {
+				cout << "pop \n";
+			}
+			else {
+				cout << iii << "\n";
+			}
+			
+			*/
+
 		}
 	}
 }
