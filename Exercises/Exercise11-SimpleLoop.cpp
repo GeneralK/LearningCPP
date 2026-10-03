@@ -67,7 +67,7 @@ using std::cin;
 namespace loopExercise {
 	void menue();
 	long sumTo(int userInput); //forgot to add input parameter
-	int fizzBuzz(int userInput);
+	void fizzBuzz(int userInput);
 };
 
 void Exercise11() {
@@ -194,7 +194,11 @@ namespace loopExercise {
 		}
 		case 7:
 		{
-
+			int tempInputFB{ 0 };
+			cout << "Type in an integer. \n";
+			cin >> tempInputFB;
+			fizzBuzz(tempInputFB);
+			break;
 		}
 		case EXIT_MENU:
 			//Exits Program
@@ -210,8 +214,22 @@ namespace loopExercise {
 		}
 		return Total;
 	}
-	int fizzBuzz(int userInput) {
-
+	void fizzBuzz(int userInput) {
+		// feel like a switch statement will make this super fast. but going to comply with question guideline.
+		for (int iii = 1;iii <= userInput;++iii) { //apparently, I cant use int loop {}, int input value.
+			if (iii % 3 == 0 && iii % 5 == 0) {
+				cout << "fizzbuzz \n";
+			}
+			else if (iii % 3 == 0) {
+				cout << "fizz \n";
+			}
+			else if (iii % 5 == 0) {
+				cout << "buzz \n";
+			}
+			else {
+				cout << iii <<"\n";
+			}
+		}
 	}
 }
 
