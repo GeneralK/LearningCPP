@@ -32,6 +32,30 @@ For example, sumTo(5) should return 15, which is 1 + 2 + 3 + 4 + 5.
 
 Hint: Use a non-loop variable to accumulate the sum as you iterate from 1 to the input value,
 much like the pow() example above uses the total variable to accumulate the return value each iteration.
+
+Q#4
+The rules of the game are simple: Starting at 1, and counting upward, replace any number divisible only by three with the word “fizz”, 
+any number only divisible by five with the word “buzz”, and any number divisible by both 3 and 5 with the word “fizzbuzz”.
+
+Implement this game inside a function named fizzbuzz() that takes a parameter determining what number to count up to. 
+Use a for-loop and a single if-else chain (meaning you can use as many else-if as you like).
+
+The output of fizzbuzz(15) should match the following:
+1
+2
+fizz
+4
+buzz
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizzbuzz
 */
 
 
@@ -43,6 +67,7 @@ using std::cin;
 namespace loopExercise {
 	void menue();
 	long sumTo(int userInput); //forgot to add input parameter
+	int fizzBuzz(int userInput);
 };
 
 void Exercise11() {
@@ -61,6 +86,7 @@ namespace loopExercise {
 				4: Print 1 first line. Pyramid Shape
 				5: Prints every even number from 0 to 20
 				6: Summation : nth Triangular Number
+				7: FizzBuzz
 				99: Exit
 			
 				Enter a choice:)"
@@ -166,6 +192,10 @@ namespace loopExercise {
 			cout << "The total is: " << sumTo(tempInputTriange);
 			break;
 		}
+		case 7:
+		{
+
+		}
 		case EXIT_MENU:
 			//Exits Program
 			break;
@@ -179,6 +209,9 @@ namespace loopExercise {
 			Total += inputValue;
 		}
 		return Total;
+	}
+	int fizzBuzz(int userInput) {
+
 	}
 }
 
