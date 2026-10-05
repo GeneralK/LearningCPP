@@ -242,33 +242,25 @@ namespace loopExercise {
 		}
 	}
 	void fizzBuzz7(int userInput) {
-		//else cannot take a condition
-		bool track {0};
-		for (int iii = 1;iii <= userInput;++iii) { //apparently, I cant use int loop {}, int input value.
-			if (iii % 3 == 0 && iii % 5 == 0) {
-				cout << "fizzbuzz \n";
+		// thought about not using a /n for each cout so I can combine the words. But I didnt take the idea further :/
+		for (int iii = 1;iii <= userInput;++iii) {
+			bool isFizzBuzzPop{ 0 };
+			if (iii % 3 == 0) {
+				cout << "fizz";
+				isFizzBuzzPop = true;
 			}
-
-			/*
-			
-			if (bool is false){
-
-
-			else if (iii % 3 == 0) {
-				cout << "fizz \n";
+			if (iii % 5 == 0) {
+				cout << "buzz";
+				isFizzBuzzPop = true;
 			}
-			else if (iii % 5 == 0) {
-				cout << "buzz \n";
+			if (iii % 7 == 0) {
+				cout << "pop";
+				isFizzBuzzPop = true;
 			}
-			else if (iii % 7 == 0) {
-				cout << "pop \n";
+			if (!isFizzBuzzPop) {
+				cout << iii;
 			}
-			else {
-				cout << iii << "\n";
-			}
-			
-			*/
-
+			cout << "\n";
 		}
 	}
 }
