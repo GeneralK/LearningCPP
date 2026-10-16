@@ -9,6 +9,9 @@ structure of this project is basically a slightly tweaked vesrion of Question #3
 personally thought it was a great format for what Q#2 was asking.
 */
 
+
+//#define ENABLE_DEBUG
+
 #include <iostream>
 #include <array>
 #include <vector>
@@ -40,8 +43,10 @@ namespace myprime {
 	}
 
 	int eratosthenes(int userNumber) {
-		std::vector <int> a (userNumber);
+		std::vector <int> a(userNumber);
+#ifdef ENABLE_DEBUG
 		cout << a.size();
+#endif
 		a[1] = 0;
 		for (int iii = 2; iii >= userNumber; ++iii) {
 			a[iii] = 1;
@@ -57,7 +62,7 @@ namespace myprime {
 				;
 			}
 		}
-		return(a[userNumber]);
+		return(a[userNumber-1]);//hopefully this works the way I think it does. Since vector elements start at 0, not 1.
 		//ref: https://t5k.org/glossary/page.php?sort=SieveOfEratosthenes
 	}
 
@@ -68,7 +73,8 @@ namespace myprime {
 				1: Simple Prime Q & A
 				2: Complex Prime
 			
-				Enter a choice:)"
+				Enter a choice: 
+				)"
 		);
 		cin >> menueChoice;
 		switch (menueChoice) {
@@ -84,9 +90,19 @@ namespace myprime {
 		case 2:
 		{
 			int userPrimeNum;
-			cout << "Enter a integer.";
+			cout << "Enter a integer: \n";
 			cin >> userPrimeNum;
-			eratosthenes(userPrimeNum);
+			if (userPrimeNum == 1) {
+				cout << "1 is not prime";
+				break;
+			}
+			if (eratosthenes(userPrimeNum) == 0) {
+				cout << " not prime";
+			}
+			else {
+				cout << "prime";
+			}
+			;
 		}
 		break;
 		}
