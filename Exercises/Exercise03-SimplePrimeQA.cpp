@@ -16,7 +16,7 @@ personally thought it was a great format for what Q#2 was asking.
 #include <array>
 #include <vector>
 #include <format>
-#include <cmath> //sqrt() function
+#include <cassert>
 using std::cout;
 using std::cin;
 

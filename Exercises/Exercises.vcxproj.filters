@@ -60,9 +60,15 @@
     <ClCompile Include="CreateMenu.cpp">
       <Filter>Func</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise12-HiLo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
