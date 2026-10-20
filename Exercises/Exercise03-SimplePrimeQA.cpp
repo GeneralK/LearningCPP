@@ -43,27 +43,21 @@ namespace myprime {
 	}
 
 	int eratosthenes(int userNumber) {
-		std::vector <int> a(userNumber);
+		std::vector <int> a(userNumber+1, true); // Creates user defined # of vector elements, all set to true. +1 to compensate for [0] in vector. 
 #ifdef ENABLE_DEBUG
 		cout << a.size();
 #endif
+		a[0] = 0;
 		a[1] = 0;
-		for (int iii = 2; iii >= userNumber; ++iii) {
-			a[iii] = 1;
-		}
-		int p = 2;
-		while ((p * p) <= userNumber) {
-			int j = p * p;
-			while (j <= userNumber) {
-				a[j] = 0;
-				j = j + p;
-			}
-			for (p; a[p] == 1; ++p) {
-				;
+		for (int iii = 2; iii <= userNumber; ++iii) {	// starts the sieve at number 2, up to user's input. increases the value for each loop.
+			if (a[iii] && (long long)iii * iii <= userNumber) { //(long long) typecasts iii. The conditional checks if iii^2 is out of bounds (relative to user input) and if a[iii] is not marked false.															
+				for (int j = iii * iii; j <= userNumber; j += iii) //Place holder j uses value of iii squared as starting point, then the loop crosses out multiples of iii. 
+					a[j] = false;
 			}
 		}
-		return(a[userNumber-1]);//hopefully this works the way I think it does. Since vector elements start at 0, not 1.
+		return(a[userNumber]);//returns the element that user wants to check as false or true.
 		//ref: https://t5k.org/glossary/page.php?sort=SieveOfEratosthenes
+		//code ref: https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html. 
 	}
 
 	void menue() {
