@@ -15,8 +15,7 @@ Use the Random.h header from 8.15 -- Global random numbers (Random.h).
 https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz/
 */
 
-#include "Random.h" //CPP custom randomizer
-#include "Common.h"
+
 
 /*
 program rand pick 1-100 inclusive
@@ -27,23 +26,60 @@ if out of guess >> lose & tell right #
 ask if user want to play again
 */
 
+#define ENABLE_DEBUG
+#include "Random.h" //CPP custom randomizer
+#include "Common.h"
 
-void hiLoExecute() {
-	hiLoContent gameStart;
-}
+
 struct hiLoContent {
 	//houses the full game
 	const int MAXATTEMPT{ 7 };
 	int randomInt = Random::get(1, 100);
 	int currentAttempt{ 1 };
-	
+
+	void hiLoGuess() {
+		int userGuess{ 0 };
+#ifdef ENABLE_DEBUG
+		cout << "\n" << randomInt << "\n";
+#endif
+		cout << std::format("Guess #{}: ", currentAttempt);
+		cin >> userGuess;
+		if (userGuess < 0) {
+			cout << "we're taking your legs";
+			++currentAttempt;
+		}
+		if (userGuess == randomInt) {
+			cout << "Correct! You win!";
+			currentAttempt = 8;
+		}
+		else if (userGuess < randomInt) {
+			cout << "Your guess is too low.";
+			++currentAttempt;
+		}
+		else if (userGuess > randomInt) {
+			cout << "Your guess is too high.";
+			++currentAttempt;
+		}
+	}
+};
+
+void hiLoExecute() {
+	hiLoContent gameStart;
+	cout << "Let's play a game. I'm thinking of a number between 1 and 100. You have 7 tries to guess what it is.\n";
+	while (gameStart.currentAttempt <= gameStart.MAXATTEMPT) {
+		gameStart.hiLoGuess();
+	}
 }
+
+
 
 
 void Exercise12()
 {
 	bool play{ true };
 	while (play) { //plays the game while true
+		hiLoExecute();
+		cout << "Would you like to play again (y/n)?";
 
 
 	}
