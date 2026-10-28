@@ -70,8 +70,8 @@ struct hiLoContent {
 #ifdef ENABLE_DEBUG
 		cout << "\n" << randomInt << "\n";
 #endif
-		cout << std::format("Guess #{}: ", currentAttempt);
-		cin >> userGuess;
+		cout << "Guess #"<< currentAttempt << ": ";
+		cin >> userGuess; // If user input letters here, game will break. Exercise said assume valid input. I'm too lazy to fix this.
 		if (userGuess < 0) {
 			cout << "we're taking your legs";
 			++currentAttempt;
@@ -99,15 +99,11 @@ void hiLoExecute() {
 	}
 }
 
-
 void Exercise12()
 {
 	playAgain play = playAgain::Yes;
 	do {
-
 		hiLoExecute();
-
-		/*	cin >> tempAnswer; // I misunderstood this. I thought Im asking the program to add previous user input into tempAnswer. But it's actually waiting/triggering 2nd input request */
 #ifdef ENABLE_DEBUG
 		cout << "\n Debugging - tempAsnwer:" << tempAnswer << "\n";
 #endif
@@ -115,3 +111,5 @@ void Exercise12()
 	} while (play == playAgain::Yes); //Game loops while play is true. 
 	cout << "Thank you for playing.";
 }
+
+/*	cin >> tempAnswer; // I misunderstood this. I thought Im asking the program to add previous user input into tempAnswer. But it's actually waiting/triggering 2nd input request */
