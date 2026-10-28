@@ -77,12 +77,20 @@ void hiLoExecute() {
 void Exercise12()
 {
 	bool play{ true };
-	while (play) { //plays the game while true
+	do {
+		char tempAnswer{ 0 };
 		hiLoExecute();
-		cout << "Would you like to play again (y/n)?";
-
-
-	}
-
+		while (tempAnswer !='n' && tempAnswer !='N') // keep looping unless user types n or N
+		{
+			cout << "Would you like to play again (y/n)?";
+			if (!(cin >> tempAnswer)) {
+				cout << "Please enter y/n";
+			}
+			else {
+				cin >> tempAnswer;
+			}
+		}
+		play = false;
+	} while (play); //Game loops while play is true. 
 
 }
