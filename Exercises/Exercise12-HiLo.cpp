@@ -77,15 +77,15 @@ struct hiLoContent {
 			++currentAttempt;
 		}
 		if (userGuess == randomInt) {
-			cout << "Correct! You win!";
+			cout << "Correct! You win! \n";
 			currentAttempt = 8;
 		}
 		else if (userGuess < randomInt) {
-			cout << "Your guess is too low.";
+			cout << "Your guess is too low. \n";
 			++currentAttempt;
 		}
 		else if (userGuess > randomInt) {
-			cout << "Your guess is too high.";
+			cout << "Your guess is too high. \n";
 			++currentAttempt;
 		}
 	}
