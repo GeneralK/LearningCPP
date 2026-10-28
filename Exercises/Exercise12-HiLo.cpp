@@ -30,7 +30,34 @@ ask if user want to play again
 #include "Random.h" //LearnCPP custom randomizer
 #include "Common.h"
 
-//highkey considering enumeration for input validation.
+enum class playAgain {
+	Yes,
+	No
+};
+
+playAgain validateInput(){
+	char tempAnswer{ 0 };
+	cout << "Would you like to play again (y/n)? \n";
+	while (tempAnswer!='N' && tempAnswer != 'n')
+	{
+		if (!(cin >> tempAnswer)) {
+			cout << "Input Invalid. Please enter Y/N";
+			cin >> tempAnswer;
+		}
+		if (tempAnswer == 'n' || tempAnswer == 'N')  // wonder if monads apply here.
+		{
+			return playAgain::No;
+		}
+
+		if (tempAnswer == 'y' || tempAnswer == 'Y')
+		{
+			return playAgain::Yes;
+		}
+		else {
+			cout << "Input Invalid. Please enter Y/N \n";
+		}
+	}
+}
 
 struct hiLoContent {
 	//houses the full game
@@ -73,31 +100,18 @@ void hiLoExecute() {
 }
 
 
-
-
 void Exercise12()
 {
-	bool play{ true };
+	playAgain play = playAgain::Yes;
 	do {
-		char tempAnswer{ 0 };
+
 		hiLoExecute();
-		cout << "Would you like to play again (y/n)? \n";
-		if (!(cin >> tempAnswer)) {
-			cout << "Input Invalid. Please enter Y/N";
-		}
+
 		/*	cin >> tempAnswer; // I misunderstood this. I thought Im asking the program to add previous user input into tempAnswer. But it's actually waiting/triggering 2nd input request */
 #ifdef ENABLE_DEBUG
-			cout << "\n Debugging - tempAsnwer:" << tempAnswer << "\n";
+		cout << "\n Debugging - tempAsnwer:" << tempAnswer << "\n";
 #endif
-		if (tempAnswer == 'n' || tempAnswer == 'N') {
-			play = false;
-		}
-		while (tempAnswer != 'y' && tempAnswer != 'Y') {
-			cout << "Input Invalid. Please enter Y/N \n";
-			cin >> tempAnswer;
-
-
-		}
-	} while (play); //Game loops while play is true. 
+		play = validateInput( );
+	} while (play == playAgain::Yes); //Game loops while play is true. 
 	cout << "Thank you for playing.";
 }
