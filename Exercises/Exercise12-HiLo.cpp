@@ -26,10 +26,11 @@ if out of guess >> lose & tell right #
 ask if user want to play again
 */
 
-#define ENABLE_DEBUG
-#include "Random.h" //CPP custom randomizer
+//#define ENABLE_DEBUG
+#include "Random.h" //LearnCPP custom randomizer
 #include "Common.h"
 
+//highkey considering enumeration for input validation.
 
 struct hiLoContent {
 	//houses the full game
@@ -80,17 +81,23 @@ void Exercise12()
 	do {
 		char tempAnswer{ 0 };
 		hiLoExecute();
-		while (tempAnswer !='n' && tempAnswer !='N') // keep looping unless user types n or N
-		{
-			cout << "Would you like to play again (y/n)?";
-			if (!(cin >> tempAnswer)) {
-				cout << "Please enter y/n";
-			}
-			else {
-				cin >> tempAnswer;
-			}
+		cout << "Would you like to play again (y/n)? \n";
+		if (!(cin >> tempAnswer)) {
+			cout << "Input Invalid. Please enter Y/N";
 		}
-		play = false;
-	} while (play); //Game loops while play is true. 
+		/*	cin >> tempAnswer; // I misunderstood this. I thought Im asking the program to add previous user input into tempAnswer. But it's actually waiting/triggering 2nd input request */
+#ifdef ENABLE_DEBUG
+			cout << "\n Debugging - tempAsnwer:" << tempAnswer << "\n";
+#endif
+		if (tempAnswer == 'n' || tempAnswer == 'N') {
+			play = false;
+		}
+		while (tempAnswer != 'y' && tempAnswer != 'Y') {
+			cout << "Input Invalid. Please enter Y/N \n";
+			cin >> tempAnswer;
 
+
+		}
+	} while (play); //Game loops while play is true. 
+	cout << "Thank you for playing.";
 }

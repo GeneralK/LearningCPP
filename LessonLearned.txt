@@ -274,3 +274,13 @@ Also learned from my friend that i++ is less efficient than ++i due to assembly 
 
 8.23.26
 Learned that you can add "filter" to a project, which looks like a folder. 
+
+10.28.26
+Misunderstood "cin >> [variable]". Thought invoking this a 2nd time, after input validation, means I'm asking the program to pass the value into the variable.
+i.e :
+int x; 
+if (!(cin>> x )){
+} else
+{ cin>> x }
+
+The input validation actually feeds the value into x already. Not need for the else statement.
