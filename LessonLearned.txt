@@ -284,3 +284,11 @@ if (!(cin>> x )){
 { cin>> x }
 
 The input validation actually feeds the value into x already. Not need for the else statement.
+
+10.31.26
+https://www.learncpp.com/cpp-tutorial/stdcin-and-handling-invalid-input/
+This lesson includes 3 things that I find helpful.
+1. Putting user intput into switch(userinput) { case } - for input validation
+2. a void ignoreLine() function that's good to have. Clears invalid cin. 
+3. a bool hasUnextractedInput() function. Detects if there are unextracted inputs, which then runs the ignoreline function
+

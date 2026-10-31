@@ -35,6 +35,11 @@ enum class playAgain {
 	No
 };
 
+void ignoreLine()
+{
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+
 playAgain validateInput(){
 	char tempAnswer{ 0 };
 	cout << "Would you like to play again (y/n)? \n";
@@ -72,6 +77,15 @@ struct hiLoContent {
 #endif
 		cout << "Guess #"<< currentAttempt << ": ";
 		cin >> userGuess; // If user input letters here, game will break. Exercise said assume valid input. I'm too lazy to fix this.
+		while (!std::cin) // If the previous extraction failed. Code taken from LearnCPP.com lesson 9.5
+		{
+			// Let's handle the failure
+			std::cin.clear(); // Put us back in 'normal' operation mode
+			ignoreLine();     // And remove the bad input
+			cout << "Please Enter A Valid Integer.\n";
+			cout << "Guess #" << currentAttempt << ": ";
+			cin >> userGuess;
+		}
 		if (userGuess < 0) {
 			cout << "we're taking your legs";
 			++currentAttempt;
