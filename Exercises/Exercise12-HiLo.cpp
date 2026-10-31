@@ -29,16 +29,13 @@ ask if user want to play again
 //#define ENABLE_DEBUG
 #include "Random.h" //LearnCPP custom randomizer
 #include "Common.h"
+#include "CinClear.h"
 
 enum class playAgain {
 	Yes,
 	No
 };
 
-void ignoreLine()
-{
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}
 
 playAgain validateInput(){
 	char tempAnswer{ 0 };

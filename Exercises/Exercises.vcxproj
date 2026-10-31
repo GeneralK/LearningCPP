@@ -153,9 +153,11 @@
     <ClCompile Include="Exercise10-StaticVariable.cpp" />
     <ClCompile Include="Exercise11-SimpleLoop.cpp" />
     <ClCompile Include="Exercise12-HiLo.cpp" />
+    <ClCompile Include="Exercise13 -TBD.cpp" />
     <ClCompile Include="ExerciseLauncher.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CinClear.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Random.h" />
   </ItemGroup>
